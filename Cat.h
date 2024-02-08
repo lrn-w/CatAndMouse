@@ -28,8 +28,8 @@ public:
         double xPosition = (double)(cos(angle) * distance);
         double yPosition = (double)(sin(angle) * distance);      
 
-        this->location.position_x = xPosition;
-        this->location.position_y = yPosition;
+        this->location.position_x += xPosition;
+        this->location.position_y += yPosition;
         std::cout << "Cat coordinates: (" << this->location.position_x << "," << this->location.position_y << ")" << endl;
     }
 
