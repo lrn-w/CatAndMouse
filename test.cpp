@@ -1,5 +1,3 @@
-#ifndef MAIN_H
-#define MAIN_H
 #include <SFML\Graphics.hpp>
 
 #include <Mouse.h>
@@ -13,10 +11,6 @@ Process arrow key movements to set Mouse coordinates.
 */
 void processMove(sf::Event event, Mouse *mouse)
 {
-    double x_position, y_position;
-    x_position = 0.0;
-    y_position = 0.0;
-
     switch (event.key.code)
     {
     case sf::Keyboard::Left:
@@ -75,4 +69,3 @@ int main()
 
     return 0;
 }
-#endif
