@@ -2,7 +2,6 @@
 #include <Animal.h>
 #include <Maze.h>
 #include <iostream>
-using namespace std;
 
 class Mouse: public Animal
 {
@@ -21,14 +20,14 @@ class Mouse: public Animal
             // increment/decrement mouse coordinates
             this->location.position_x += positionX;
             this->location.position_y += positionY;
-            cout << "Mouse running!! Coordinates(" << this->location.position_x  << "," << this->location.position_y <<  ")" << endl;
+            std::cout << "Mouse running!! Coordinates(" << this->location.position_x  << "," << this->location.position_y <<  ")" << std::endl;
 
             // call checkLocation to verify if mouse is as cheese or stuck at dead end
             checkLocation();
 
             // notifty Maze and consumers of Mouse's location
             this->mazeObj->sendMouseLocation(this->location.position_x,this->location.position_y);
-            cout << "*************************************************************" << endl;
+            std::cout << "*************************************************************" << std::endl;
         }
 
         void checkLocation()
@@ -40,7 +39,7 @@ class Mouse: public Animal
 
             if(it != cheese_coordinates.end())
             {
-                std::cout << "Mouse found cheese! Game over" << endl;
+                std::cout << "Mouse found cheese! Game over" << std::endl;
             }
 
             /* Future developments: 

@@ -4,7 +4,7 @@
 #include <Animal.h>
 #include <cmath>
 #include <iostream>
-using namespace std;
+
 
 const double PI = 3.14159265358979323846;
 
@@ -21,7 +21,7 @@ public:
     void attack(double mousePositionX, double mousePositionY, int distance)
     {
         // Cat chasing mouse
-        std::cout << "Mouse is nearby! Distance:" << distance << endl;
+        std::cout << "Mouse is nearby! Distance:" << distance << std::endl;
 
         // move cats position
         double angle = (atan2(mousePositionY - this->location.position_y, mousePositionX - this->location.position_x)) * 180 / PI;
@@ -30,7 +30,7 @@ public:
 
         this->location.position_x += xPosition;
         this->location.position_y += yPosition;
-        std::cout << "Cat coordinates: (" << this->location.position_x << "," << this->location.position_y << ")" << endl;
+        std::cout << "Cat coordinates: (" << this->location.position_x << "," << this->location.position_y << ")" << std::endl;
     }
 
     void checkLocation(double mousePositionX, double mousePositionY)
@@ -44,7 +44,7 @@ public:
             // if distance is zero, Cat is very close to mouse
             if (distance == 0)
             {
-                cout << "Cat got mouse! GAME OVER!" << endl;
+                std::cout << "Cat got mouse! GAME OVER!" << std::endl;
             }
             else
             {

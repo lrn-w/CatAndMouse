@@ -48,7 +48,7 @@ int main()
             {
             // window closed
             case sf::Event::Closed:
-                cout << "Window closing" << endl;
+                std::cout << "Window closing" << std::endl;
                 window.close();
                 break;
 

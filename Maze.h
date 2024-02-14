@@ -3,7 +3,7 @@
 #include <list>
 #include <Cat.h>
 #include <iostream>
-using namespace std;
+
 
 class Maze
 {
@@ -23,7 +23,7 @@ class Maze
         void sendMouseLocation(double position_x, double postion_y) // include arg with mouse coordinates
         {
             // send mouse location to cat
-            std::cout << "Maze: Sending Mouse's coordinates to the cat!" << endl;
+            std::cout << "Maze: Sending Mouse's coordinates to the cat!" << std::endl;
             catObj->checkLocation(position_x,postion_y);
 
         }
